@@ -1,6 +1,6 @@
 # Listen To This
 
-A multi-app repository for the Listen To This Discord Server
+A multi-app repository for the Listen To This Discord server
 
 ## Cloning
 
