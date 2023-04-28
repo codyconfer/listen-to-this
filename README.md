@@ -6,7 +6,7 @@ A multi-app repository for the Listen To This Discord server
 
 Clone this repository with the `--recurse-submodules` flag
 
-or
+*or*
 
 Run the following commands after cloning
 
