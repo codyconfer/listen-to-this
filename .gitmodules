@@ -1,0 +1,3 @@
+[submodule "hoover_bot"]
+	path = hoover_bot
+	url = https://github.com/codyconfer/hoover_bot.git
