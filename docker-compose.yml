@@ -1,12 +1,20 @@
 version: "3.9"
 services:
-  hoover_bot:
-    build: ./hoover_bot
   redis:
     image: "redis:alpine"
     ports:
       - "6379:6379"
     volumes:
       - ./redis-volume:/data
-#  datadog:
-#    image: "public.ecr.aws/datadog/docker-dd-agent"
+  prometheus:
+    image: prom/prometheus:v2.30.3
+    ports:
+      - 9000:9090
+    volumes:
+      - ./prometheus:/etc/prometheus
+      - prometheus-data:/prometheus
+    command: --web.enable-lifecycle  --config.file=/etc/prometheus/prometheus.yml
+  hoover_bot:
+    build: ./hoover_bot
+volumes:
+  prometheus-data:
